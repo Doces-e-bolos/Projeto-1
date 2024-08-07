@@ -367,4 +367,20 @@ footer ul li {
   border-radius: 30px;
   width: max-content;
   transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/*Cardapio*/
+.cardapio {
+  display: flex;
+}
+
+.cardapio .imagem {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cardapio p {
+  padding: 20px;
 }
