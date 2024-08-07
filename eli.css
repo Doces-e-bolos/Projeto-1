@@ -1,24 +1,370 @@
-.img_fundo {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sriracha&display=swap");
+:root {
+  ---font01: "Dancing Script", Arial, Helvetica, sans-serif;
+  ---cor02: #4e3c1b;
+  ---cor04: #c5a97a;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Header*/
+.nav_bar {
+  display: flex;
+  background-color: var(---cor04);
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: var(---cor02);
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: 0px 15px 0px;
+}
+
+nav ul li a:hover {
+  color: #835f21;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.logoimg {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+}
+
+.logoimg:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.contato {
+  display: flex;
+  justify-content: end;
+  background-color: var(---cor02);
+  padding: 10px 10px 5px 10px;
+}
+
+.contato svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+  margin: 0px 6px 0px 6px;
+}
+.contato svg:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  color: var(---cor04);
+}
+
+/*Introdução*/
+
+.titulo_home {
+  font-family: var(---font01);
+  margin-top: 40px;
+  font-size: 50px;
+  text-align: center;
+  margin: 30px 0 10px 0;
+  color: #835f21;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.508);
+}
+.introft {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.inicio {
+  background-color: white;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.paragrafo_titulo {
+  font-size: 20px;
+  text-align: center;
+  margin: 30px;
+}
+
+.container {
+  display: grid;
+}
+
+.container_ftdireita {
+  background-color: var(---cor04);
+  color: #332711;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container_ftdireita > .imagem:nth-child(1) {
+  order: 2;
+}
+
+.container_ftdireita > .escrita:nth-child(2) {
+  order: 1;
+}
+
+.container_ftdireita > p {
+  padding: 20px;
+}
+
+.container_ftesquerda {
+  display: flex;
+  color: #332711;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container_ftesquerda > p {
+  padding: 20px;
+}
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.imagem {
+  margin-right: 13px;
+  max-width: 100%;
+  margin-bottom: 13px;
+  padding: 35px;
+}
+
+.imagem img {
+  max-width: 250px;
+  height: auto;
+  border: 2px solid black;
+}
+
+.imagem:hover img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.texto {
+  width: 40%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #332711;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.texto p {
+  position: relative;
+  margin-top: 40px;
+  font-size: 20px;
+  padding-left: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.texto p::before {
+  content: "";
+  background-image: url(fotos/coração.png);
+  background-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 19%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.introft img {
+  transition: transform 0.2s ease;
+  width: 400px;
   height: 230px;
+  margin: 15px 15px 30px 15px;
+}
+
+.introft:hover img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+table {
+  background-color: rgb(85, 53, 4);
+  color: #332711;
+  height: 200px;
   width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  padding: 17px;
+  text-align: center;
+  background-color: #422d18;
+  color: white;
+  border: 3px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+td {
+  border: 3px solid black;
+  padding: 15px;
+  background-color: #77603d;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+td:hover {
+  color: rgb(255, 255, 255);
+  background-color: #3f2616;
+  transition: 0.5s;
 }
 
 h1 {
+  margin-top: 40px;
+  font-size: 40px;
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 24px;
-  color: black;
+  margin: 30px 0 10px 0;
+  color: var(---cor02);
 }
 
 h3 {
+  margin-top: 40px;
+  font-size: 30px;
   text-align: center;
-  font-size: 25px;
+  margin: 30px 0 10px 0;
+  color: #8b6b33;
 }
-h2 {
+
+p {
+  font-size: 25px;
   text-align: center;
+  max-width: 1300px;
+  margin: 10px 0 10px 0;
+  color: #523e28;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_ftdireita > p,
+.container_ftesquerda > p {
+  font-family: var(---font01);
+  color: black;
+  font-weight: bolder;
   font-size: 30px;
 }
-p {
+
+.kits_degu {
+  width: 400px;
+  height: 230px;
+  margin-top: 10px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kits_degu img {
+  max-width: auto;
+  height: auto;
+  transition: transform 0.1s ease;
+  margin-right: 40px;
+}
+
+.kits_degu:hover img {
+  transform: scale(1.1);
+}
+
+.quero_pedir {
   text-align: center;
-  font-size: 20px;
+}
+
+.quero_pedir img {
+  margin-top: -100px;
+  margin-bottom: -60px;
+  width: 250px;
+  height: auto;
+}
+
+.quero_pedir:hover img {
+  transform: scale(1.1);
+}
+
+.pedir_ja {
+  font-size: 19px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  color: #3b2d1f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  background-color: #332711;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+  color: #a18041;
+}
+
+.rodape {
+  background-color: #332711;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: #ece6e6;
+}
+
+/*ALUNOS*/
+.alunos {
+  display: grid;
+  justify-content: center;
+}
+
+.alunos > p {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.alunos > p:hover {
+  color: var(---cor04);
+  background-color: var(---cor02);
+  border-radius: 30px;
+  width: max-content;
+  transform: scale(1.1);
 }
