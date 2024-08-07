@@ -366,8 +366,8 @@ footer ul li {
   background-color: var(---cor02);
   border-radius: 30px;
   width: max-content;
-  transform: scale(1.1);
-  transition: 0.5s;
+  transform: scale(1);
+  transition: 1s;
 }
 
 /*Cardapio*/
