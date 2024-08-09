@@ -7,6 +7,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Header*/
@@ -92,8 +93,6 @@ nav ul li a:hover {
 
 .inicio {
   background-color: white;
-  height: 250px;
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -341,6 +340,21 @@ footer ul li {
   color: #a18041;
 }
 
+footer h1,h3 {
+
+  color: white;
+}
+
+footer h1,h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+#footer_contato > h1,h3{
+  text-align: left;
+  
+}
+
 .rodape {
   background-color: #332711;
   padding: 20px;
@@ -384,3 +398,121 @@ footer ul li {
 .cardapio p {
   padding: 20px;
 }
+
+
+/*CONTATO*/
+
+.localiza{
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+.loc {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.loc1 {
+    text-align: center;
+}
+
+.loc2 {
+    text-align: left;
+    margin-left: 30px;
+    width: 30px;
+    height: 50px;
+    margin-top: -10px;
+
+}
+
+.loc3 {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+}
+
+.mensagem {
+    margin: 100px;
+}
+
+.container_contato{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+#form_contato > div{
+    display: grid;
+    align-items:center;
+}
+
+#form_contato > div > input{
+    padding: 15px;
+    font-size: 16px;
+    margin: 5px;
+    background-color: rgba(172, 170, 170, 0.697);
+    border:none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#form_contato > div{
+    padding:10px;
+}
+
+label{
+    width:200px;
+}
+
+#botoes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+
+#botoes > input{
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    padding: 15px 35px 15px 35px;
+    margin: 10px;
+    border:none;
+    background-color: var(---cor02);
+    color: white;
+    font-weight: bolder;
+    font-size:16px ;
+    border-radius: 15px;
+    
+}
+#botoes > input:hover{
+  background-color: var(---cor04);
+  color: rgb(22, 21, 21);
+  transition: 1s;
+  transform: perspective(1.2);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#form_contato > div > textarea{
+    height: 100px;
+    margin: 5px;
+    background-color: rgba(172, 170, 170, 0.697);
+}
+
+.loc3 > a > svg{
+    color:var(---cor02);
+    height:50px;
+    width:50px;
+}
+
+.loc3 > a > svg:hover{
+    transform: scale(1.2);
+    transition:1s;
+    color: var(---cor04);
+    background-color: var(---cor02);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+
