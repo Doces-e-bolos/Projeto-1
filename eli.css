@@ -350,24 +350,20 @@ footer ul li {
 }
 
 /*ALUNOS*/
-.alunos {
-  display: grid;
-  justify-content: center;
-}
-
-.alunos > p {
+.alunos h1 {
   padding: 20px;
   font-size: 30px;
   font-weight: bolder;
+  background-color: transparent; /* Mantém o fundo transparente no estado normal */
+  border-radius: 30px; /* Aplica o border-radius mesmo sem hover */
+  text-align: center; /* Centraliza o texto */
+  transition: 1s;
 }
 
-.alunos > p:hover {
+.alunos h1:hover {
   color: var(---cor04);
   background-color: var(---cor02);
-  border-radius: 30px;
-  width: max-content;
   transform: scale(1);
-  transition: 1s;
 }
 
 /*Cardapio*/
