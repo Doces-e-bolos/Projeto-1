@@ -385,13 +385,14 @@ h1 {
   text-align: center;
 }
 
-.cardapio {
-  display: flex;
+.cardapio > .imagem {
+  display: grid;
+  text-align: center;
 }
 
-.cardapio .imagem {
+.cardapio  {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
