@@ -387,12 +387,18 @@ footer h1,h3 {
 /*Cardapio*/
 .cardapio {
   display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 .cardapio .imagem {
-  display: flex;
+  text-align:center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.cardapio > .imagem > h2{
+  margin:15px;
 }
 
 .cardapio p {
