@@ -440,6 +440,59 @@ h1 {
   color: #523e28;
 }
 
+.cart-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.quantity-btn {
+  background-color: #523e28;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#quantity-value {
+  margin: 0 15px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #523e28;
+}
+
+.finalizar-compra {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #523e28;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 150px;
+  text-align: center;
+}
+
+.finalizar-compra:hover {
+  background-color: #75553a;
+  transition: 0.3s;
+}
+
 /*CONTATO*/
 
 .localiza {
