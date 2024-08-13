@@ -1,4 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("DisappearingMessagesMode",[],(function(a,b,c,d,e,f){a=Object.freeze({OFF:0,ON:1,OPEN_ON_DEPRECATED_DO_NOT_USE:2});f["default"]=a}),66);
-__d("getLSMediaThreadPictureUrl",["LSMediaUrlUtils","rewriteFallbackUrl"],(function(a,b,c,d,e,f,g){"use strict";function a(a){var b=a.threadPictureUrl,e=a.threadPictureUrlExpirationTimestampMs;a=a.threadPictureUrlFallback;e=e;return e!=null&&d("LSMediaUrlUtils").isTimestampExpired(e)?c("rewriteFallbackUrl")(a):b}g["default"]=a}),98);
