@@ -609,6 +609,7 @@ body {
   background-color: #f9f3e7;
 }
 
+/* Estilo base do formulário */
 form {
   background-color: white;
   border-radius: 10px;
@@ -616,87 +617,79 @@ form {
   max-width: 800px;
   margin: 20px auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  padding-left: 16px;
+  display: grid;
+  align-items: center;
 }
 
-form h2 {
-  font-family: var(---font01);
-  color: var(---cor02);
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 20px;
-  padding-left: 16px;
+/* Estilo dos campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="tel"],
+form textarea,
+form select {
+  padding: 15px;
+  font-size: 16px;
+  margin: 5px;
+  background-color: rgba(172, 170, 170, 0.697);
+  border: none;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  width: 90%;
+  border-radius: 5px;
 }
 
-label {
+form input[type="checkbox"],
+form input[type="radio"],
+form input[type="date"] {
+  margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
+form input[type="time"] {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo dos botões */
+form button[type="submit"],
+form button[type="reset"] {
+  background-color: var(---cor02);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s ease, box-shadow 1s;
+}
+
+form button[type="submit"]:hover,
+form button[type="reset"]:hover {
+  background-color: var(---cor04);
+  color: rgb(22, 21, 21);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/* Estilo para o layout de botões */
+form #botoes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Estilo adicional para campos de texto */
+form textarea {
+  height: 100px;
+  background-color: rgba(172, 170, 170, 0.697);
+  margin: 5px;
+}
+
+/* Estilo dos rótulos */
+form label {
+  width: 200px;
   display: block;
   margin: 10px 0 5px;
   font-weight: bold;
   color: var(---cor02);
   padding-left: 20px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-textarea,
-select {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid var(---cor04);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  padding-left: 16px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-button[type="submit"],
-button[type="reset"] {
-  background-color: var(---cor04);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 15px;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-  padding-left: 16px;
-}
-
-button[type="submit"]:hover,
-button[type="reset"]:hover {
-  background-color: var(---cor02);
-  padding-left: 16px;
-}
-
-button[type="submit"]:active,
-button[type="reset"]:active {
-  transform: scale(1);
-  padding-left: 16px;
-}
-
-footer {
-  background-color: #332711;
-  padding: 20px;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 20px;
-}
-
-footer ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin-bottom: 10px;
-  color: #a18041;
 }
