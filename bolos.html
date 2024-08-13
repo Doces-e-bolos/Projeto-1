@@ -25,38 +25,54 @@
         </div>
         </div>
         <nav class="nav_bar">
-                <div class="logo">
-                    <a href="index.html"><img src="fotos/logo.png" alt="Logo" class="logoimg"></a>
-                </div>
+            <div class="logo">
+                <a href="index.html"><img src="fotos/logo.png" alt="Logo" class="logoimg"></a>
+            </div>
 
-                <ul>
-                    </li>
-                    <li class="menu_top__paragrafo">
-                        <a class="menu_top__link" href="index.html">Home</a>
-                    </li>
-                    <li class="menu_top__paragrafo">
-                        <a class="menu_top__link" href="alunos.html">Alunos</a>
-                    </li>
-                    <li class="menu_top__paragrafo">
-                        <a class="menu_top__link" href="#">Kit degustação</a>
-                    </li>
-                    <li class="menu_top__paragrafo">
-                        <a class="menu_top__link" href="cardapio.html">Cardápios</a>
-                    </li>
-                </ul>
-            </nav>
+            <ul>
+                </li>
+                <li class="menu_top__paragrafo">
+                    <a class="menu_top__link" href="index.html">Home</a>
+                </li>
+                <li class="menu_top__paragrafo">
+                    <a class="menu_top__link" href="alunos.html">Participantes</a>
+                </li>
+                <li class="menu_top__paragrafo">
+                    <a class="menu_top__link" href="contato.html">Entrar em contato</a>
+                </li>
+                <li class="menu_top__paragrafo">
+                    <a class="menu_top__link" href="cardapio.html">Cardápios</a>
+                <li class="menu_top__paragrafo">
+                        <a class="menu_top__link" href="pedido.html">Fazer pedido</a>
+                </li>
+
+                </li>
+            </ul>
+        </nav>
         </header>
         <main>
-            <h1>Bolos</h1>
-            <p>Os bolos mais cremosos do oeste</p>
-            <div class="imagem_car">
-            <img src="fotos/boloandar.jpg" alt="">
-                <ul>
-                    <li>Nome: Bolo de Andar</li>
-                    <li>Quantidade: 1</li>
-                
-                </ul>
-            </div>
+            <div class="cardapio">
+                <div class="imagem_car"> <!--Começo sessão Bolo-->
+                    <img src="fotos/boloandar.jpg" alt="bolo andar">
+                    <ul>
+                        <li><strong>Nome:</strong> BoloAndar</li>
+                        <li><strong>Descrição:</strong> Bolo de andares de creme</li>
+                        <li><strong>Preço:</strong> R$ 50,00 cada</li>
+                    </ul>
+                    <div class="cart-section">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#523e28">
+                            <path d="M3 3h2l1 7h13v2H7l1 5h10v2H9a1 1 0 01-1-.76L5.03 4H3V3zM5 22a2 2 0 110-4 2 2 0 010 4zm10 0a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
+                        </svg>
+                        <div class="quantity">
+                            <button class="quantity-btn" id="minus">-</button>
+                            <span id="quantity-value">1</span>
+                            <button class="quantity-btn" id="plus">+</button>
+                        </div>
+                        
+                    </div>
+                </div> <!--Seccão de Bolo finalizado-->
+                <button class="finalizar-compra" type="submit">Finalizar Compra</button>
+                <button class="finalizar-compra" type="reset">Apagar compra</button>
         </main>
         <footer>
             <p class="rodape">Horários de atendimento e endereço:</p>
