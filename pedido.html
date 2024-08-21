@@ -57,54 +57,37 @@
 
     <main>
       <h1>Faça seu Pedido</h1>
-      <form id="formpedido" action="enviar_pedido.php" method="POST">
+      <form action="enviar_pedido.php" method="POST">
         <fieldset>
           <legend>Informações do Cliente</legend>
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required /><br />
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"/><br />
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required /><br />
+          <input type="email" id="email" name="email" required placeholder="Digite seu email"/><br />
 
           <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" required /><br />
+          <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone"/><br />
 
-          <label for="endereco">Endereço:</label>
-          <textarea
-            id="endereco"
-            name="endereco"
-            rows="4"
-            cols="50"
-            required
-          ></textarea>
+          <label for="endereco">Endereço: </label>
+          <textarea id="endereco" name="endereco" rows="4" cols="50" required placeholder="Digite seu Endereço"></textarea>
         </fieldset>
 
         <fieldset>
           <legend>Detalhes do Pedido</legend>
           <label for="produto">Produto:</label>
-          <select id="produto" name="produto">
+          <select id="produto" name="produto" required>
+            <option value="">Escolha um produto</option>
             <option value="brigadeiro">Brigadeiro</option>
             <option value="beijinho">Beijinho</option>
-            <option value="bolo">Bolo</option></select
-          ><br />
+            <option value="bolo">Bolo</option>
+          </select><br />
 
           <label for="quantidade">Quantidade:</label>
-          <input
-            type="number"
-            id="quantidade"
-            name="quantidade"
-            min="1"
-            max="100"
-            required
-          /><br />
+          <input type="number" id="quantidade" name="quantidade" min="1" max="100" required placeholder="Digite a quantidade"/><br />
 
           <label for="sabores">Sabores:</label>
-          <input
-            type="checkbox"
-            id="chocolate"
-            name="sabor"
-            value="chocolate"
-          />
+          <input type="checkbox" id="chocolate" name="sabor" value="chocolate" />
           <label for="chocolate">Chocolate</label>
           <input type="checkbox" id="morango" name="sabor" value="morango" />
           <label for="morango">Morango</label>
@@ -112,20 +95,13 @@
           <label for="coco">Coco</label><br />
 
           <label for="embalagem">Tipo de Embalagem:</label>
-          <input
-            type="radio"
-            id="simples"
-            name="embalagem"
-            value="simples"
-            checked
-          />
+          <input type="radio" id="simples" name="embalagem" value="simples" />
           <label for="simples">Simples</label>
           <input type="radio" id="premium" name="embalagem" value="premium" />
           <label for="premium">Premium</label><br />
 
           <label for="mensagem">Mensagem Personalizada:</label>
-          <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea
-          ><br />
+          <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua Mensagem"></textarea><br />
         </fieldset>
 
         <fieldset>
@@ -137,10 +113,11 @@
           <input type="time" id="horario" name="horario" required /><br />
         </fieldset>
 
-        <button type="submit">Enviar Pedido</button>
+        <button type="submit" onclick="return btnSendOnClick()">Enviar Pedido</button>
         <button type="reset">Resetar Formulário</button>
       </form>
     </main>
+
 
     <footer>
       <p class="rodape">Horários de atendimento e endereço:</p>
@@ -157,4 +134,69 @@
       </p>
     </footer>
   </body>
+  <script>
+    function btnSendOnClick() {
+      const nome = document.getElementById("nome");
+      const email = document.getElementById("email");
+      const telefone = document.getElementById("telefone");
+      const endereco = document.getElementById("endereco");
+      const produto = document.getElementById("produto");
+      const quantidade = document.getElementById("quantidade");
+      const data = document.getElementById("data");
+      const horario = document.getElementById("horario");
+      const embalagemSelecionada = document.querySelector('input[name="embalagem"]:checked');
+      const checkbox = document.querySelector('input[name="sabor"]:checked');
+  
+      if (nome.value === "") {
+        alert("Preenchimento obrigatório: Nome");
+        nome.focus();
+        return false;
+      } else if (email.value === "") {
+        alert("Preenchimento obrigatório: Email");
+        email.focus();
+        return false;
+      } else if (telefone.value === "") {
+        alert("Preenchimento obrigatório: Telefone");
+        telefone.focus();
+        return false;
+      } else if (isNaN(parseInt(telefone.value))) {
+        alert("Telefone deve ser um número");
+        telefone.focus();
+        return false;
+      } else if (endereco.value === "") {
+        alert("Preenchimento obrigatório: Endereço");
+        endereco.focus();
+        return false;
+      } else if (produto.value === "") {
+        alert("Preenchimento obrigatório: Produto");
+        produto.focus();
+        return false;
+      } else if (quantidade.value === "") {
+        alert("Preenchimento obrigatório: Quantidade");
+        quantidade.focus();
+        return false;
+      } else if (data.value === "") {
+        alert("Preenchimento obrigatório: Data");
+        data.focus();
+        return false;
+      }else if (horario.value === "") {
+        alert("Preenchimento obrigatório: Horario");
+        horario.focus();
+        return false;
+      }
+      else if (!embalagemSelecionada) {
+        alert("Preenchimento obrigatório: Tipo de Embalagem");
+        document.querySelector('input[name="embalagem"]').focus();
+        return false;
+      } else if (!checkbox) {
+        alert("Preenchimento obrigatório: Sabores");
+        document.querySelector('input[name="sabor"]').focus();
+        return false;
+      }
+  
+  
+      return true;
+    }
+  </script>
+  
 </html>
