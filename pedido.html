@@ -67,7 +67,7 @@
           <input type="email" id="email" name="email" required placeholder="Digite seu email"/><br />
 
           <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone"/><br />
+          <input type="tel" id="telefone" name="telefone" required placeholder="41-99999-9999"/><br />
 
           <label for="endereco">Endereço: </label>
           <textarea id="endereco" name="endereco" rows="4" cols="50" required placeholder="Digite seu Endereço"></textarea>
@@ -151,22 +151,35 @@
         alert("Preenchimento obrigatório: Nome");
         nome.focus();
         return false;
+      } else if (!isName(nome.value)) {
+        alert("Caracter inválido: Nome");
+        nome.focus();
+        return false;
       } else if (email.value === "") {
         alert("Preenchimento obrigatório: Email");
+        email.focus();
+        return false;
+      } else if (!isEmail(email.value)) {
+        alert("Caracter Inválido: Email");
         email.focus();
         return false;
       } else if (telefone.value === "") {
         alert("Preenchimento obrigatório: Telefone");
         telefone.focus();
         return false;
-      } else if (isNaN(parseInt(telefone.value))) {
-        alert("Telefone deve ser um número");
+      } else if (!isTelefone(telefone.value)) {
+        alert("Caracter Inválido: Telefone");
         telefone.focus();
         return false;
       } else if (endereco.value === "") {
         alert("Preenchimento obrigatório: Endereço");
         endereco.focus();
         return false;
+        } else if (!isEndereco(endereco.value)){
+          alert("Caracter Inválido: Endereço");
+          endereco.focus();
+          return false;
+        
       } else if (produto.value === "") {
         alert("Preenchimento obrigatório: Produto");
         produto.focus();
@@ -175,16 +188,20 @@
         alert("Preenchimento obrigatório: Quantidade");
         quantidade.focus();
         return false;
+       } else if (isQuantidade(quantidade.value)){
+          alert("Caracter Inválido: Quantidade");
+          quantidade.focus();
+          return false;
+        
       } else if (data.value === "") {
         alert("Preenchimento obrigatório: Data");
         data.focus();
         return false;
-      }else if (horario.value === "") {
-        alert("Preenchimento obrigatório: Horario");
+      } else if (horario.value === "") {
+        alert("Preenchimento obrigatório: Horário");
         horario.focus();
         return false;
-      }
-      else if (!embalagemSelecionada) {
+      } else if (!embalagemSelecionada) {
         alert("Preenchimento obrigatório: Tipo de Embalagem");
         document.querySelector('input[name="embalagem"]').focus();
         return false;
@@ -194,9 +211,33 @@
         return false;
       }
   
-  
       return true;
     }
+  
+    function isName(nome) {
+      const re = /^[a-zA-Z\s]+$/; 
+      return re.test(nome);
+    }
+  
+    function isEmail(email) {
+      const re = /^\w.+@\w{3}.*\.\w{2,3}$/; 
+      return re.test(email);
+    }
+  
+    function isTelefone(telefone) {
+      const re = /^\d{2}-\d{5}-\d{4}$/; 
+      return re.test(telefone);
+    }
+    function isEndereco(endereco) {
+      const re = /^[0-9a-zA-Z\s,.-]+$/;
+      return re.test(endereco);
+    }
+    function isQuantidade(quantidade){
+      const re = /^d+$/
+      return re.test(quantidade)
+    }
+
   </script>
+  
   
 </html>
