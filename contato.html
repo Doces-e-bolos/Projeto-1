@@ -76,7 +76,7 @@
             </div>
 
         
-        <form action="#" method="post" id="form_contato" >
+        <form action="dados.html" method="post" id="form_contato" >
                 <h1>Formulário de Contato</h1>
                 <div>
                     <label for="inome">Nome:</label>
@@ -92,10 +92,10 @@
                 </div>
                 <div>
                     <label for="imsg">Mensagem:</label>
-                    <textarea name="msg" id="imsg">Sua mensagem aqui!</textarea>
+                    <textarea name="msg" id="imsg"></textarea>
                 </div>
                 <section id="botoes">
-                    <input type="submit" value="Enviar">
+                    <input type="button" value="Enviar" onclick="btnEnviarOnclick()">
                     <input type="reset" value="Limpar">
                 </section>
         </form>
@@ -111,4 +111,7 @@
             <h3>Será um prazer te atender e fazer parte do seu evento!</h3>
             <p class="rodape">Copyright &copy; 2024 - Eli Doces, todos os direitos reservados</p>
 </footer>
+<script src="validacaoContato.js"></script>
+</body>
+</html>
 
